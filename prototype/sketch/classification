@@ -1,0 +1,23 @@
+The purpose of the doc is to classify the document types
+
+so that the purpose of each docs get more focused.
+
+
+1) genetic
+
+  Genetic doc defines the preservation concept of the core information in
+each cells. The core information are used to define cell structure and functions.
+
+2) life-cycle
+
+  Life-cycle doc defines the time intervals between the period of life of a cell.
+
+3) structure
+ 
+  Structure doc defines the datatypes of each type of cells. The structure doc is
+closely related with the functions doc.
+
+4) functions
+
+  Functions doc defines the functions of each type of cells. The function doc is
+closely related with the structure doc.
