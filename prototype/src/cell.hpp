@@ -9,6 +9,10 @@ class Cell
 {
 private:
 	unsigned int id;
+	unsigned int cellType;
 public:
+	Cell();
+	void setCellType(unsigned int);
+	unsigned int getCellType();
 	void printCellType();
 };
