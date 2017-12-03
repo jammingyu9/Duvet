@@ -11,10 +11,8 @@ int main(int argc, char **argv)
 	Cell *cell = new Cell();
 
 	cell->printCellType();
-	cell->setCellType(2);
-	cellType = cell->getCellType();
-	cout << "Now the cell type is : " << cellType << endl;
-	
+	cell->setCellType(GENE);
+	cell->printCellType();	
 
 	return 0;
 }

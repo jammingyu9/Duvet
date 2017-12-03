@@ -1,30 +1,37 @@
-#ifndef D_P_CELL_HPP
-#define D_P_CELL_HPP
-
 #include "cell.hpp"
 #include <iostream>
 using std::cout;
 using std::endl;
+#include <string>
+using std::string;
 
 Cell::Cell()
 {
 	id = 0;
-	cellType = 0;
+	cellType = NOGENE;
 }
 
-void Cell::setCellType(unsigned int c)
+void Cell::setCellType(CellType c)
 {
 	cellType = c;
 }
 
-unsigned int Cell::getCellType()
+CellType Cell::getCellType()
 {
 	return cellType;
 }
 
 void Cell::printCellType()
 {
-	std::cout << "cell type: " << cellType << endl;
+	string ct;
+	switch (cellType)
+	{
+		case GENE:
+			ct = "gene";
+			break;
+		case NOGENE:
+			ct = "no gene";
+			break;
+	}
+	std::cout << "cell type: " << ct << endl;
 }
-
-#endif

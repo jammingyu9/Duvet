@@ -1,18 +1,25 @@
-/* Generic cell type definition for brain.
- * This cell is different from embryonic stem cell
- * for brain. This class is the parent class for 
- * all brain cells.
+/* Electric cell.
+ * 
  * 
  */
+
+#ifndef D_P_CELL_HPP
+#define D_P_CELL_HPP
+
+
+enum CellType {GENE = 0, NOGENE};
 
 class Cell
 {
 private:
-	unsigned int id;
-	unsigned int cellType;
+	unsigned long long id;
+	CellType cellType;
 public:
 	Cell();
-	void setCellType(unsigned int);
-	unsigned int getCellType();
+
+	void setCellType(CellType);
+	CellType getCellType();
 	void printCellType();
 };
+
+#endif

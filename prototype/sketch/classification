@@ -1,23 +1,38 @@
-The purpose of the doc is to classify the document types
+PURPOSE
+=======
 
-so that the purpose of each docs get more focused.
+The purpose of the doc is to classify the document types so that the purpose of each docs get more focused.
 
 
-1) genetic
+CLASSIFICATION
+==============
 
-  Genetic doc defines the preservation concept of the core information in
-each cells. The core information are used to define cell structure and functions.
+#1 generator
 
-2) life-cycle
+  generator doc defines the core information used by generator objects to generate cell structure & functions.
 
-  Life-cycle doc defines the time intervals between the period of life of a cell.
 
-3) structure
+#2 life-cycle
+
+  life-cycle doc defines the time intervals between the period of life of a cell.
+
+#3 structure
  
-  Structure doc defines the datatypes of each type of cells. The structure doc is
-closely related with the functions doc.
+  structure doc defines the datatypes of each type of cells. The structure doc is closely related with the functions doc.
 
-4) functions
+#4 functions
 
-  Functions doc defines the functions of each type of cells. The function doc is
+  functions doc defines the functions of each type of cells. The function doc is
 closely related with the structure doc.
+
+#5 trasmitter
+
+  transmitter doc defines the object that contains informations used in cell communucation.
+
+#6 instructions
+
+  instructions doc defines instructions stored in message. These instructions are used by other cells.
+
+#7 binding
+
+  binding doc defines the binding protocols between cells.
