@@ -18,12 +18,11 @@ CLASSIFICATION
 
 #3 structure
  
-  structure doc defines the datatypes of each type of cells. The structure doc is closely related with the functions doc.
+  structure doc defines the datatypes of each type of cells.
 
 #4 functions
 
-  functions doc defines the functions of each type of cells. The function doc is
-closely related with the structure doc.
+  functions doc defines the functions of each type of cells.
 
 #5 trasmitter
 

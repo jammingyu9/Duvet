@@ -8,30 +8,23 @@ using std::string;
 Cell::Cell()
 {
 	id = 0;
-	cellType = NOGENE;
+	gene = NULL;
 }
 
-void Cell::setCellType(CellType c)
+Cell::Cell(uint64_t _id, uint64_t _l)
 {
-	cellType = c;
+	id = _id;
+	gene = new Gene(_l);
 }
 
-CellType Cell::getCellType()
+void Cell::insertGeneInfo(char *_geneInfo)
 {
-	return cellType;
-}
-
-void Cell::printCellType()
-{
-	string ct;
-	switch (cellType)
+	// Todo
+	// Performance issue
+	if (gene)
 	{
-		case GENE:
-			ct = "gene";
-			break;
-		case NOGENE:
-			ct = "no gene";
-			break;
+		for (int i=0; i<sizeof(_geneInfo) - 1; i++)
+			gene->insert(_geneInfo[i]);
 	}
-	std::cout << "cell type: " << ct << endl;
 }
+

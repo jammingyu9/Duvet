@@ -5,14 +5,13 @@ using std::endl;
 
 int main(int argc, char **argv)
 {
-
 	// main cell test
-	unsigned int cellType;
-	Cell *cell = new Cell();
+	Cell *bacteria;
+	
 
-	cell->printCellType();
-	cell->setCellType(GENE);
-	cell->printCellType();	
+	bacteria = new Cell(1, 32);
+
+	bacteria->insertGeneInfo("GATTACA");
 
 	return 0;
 }
