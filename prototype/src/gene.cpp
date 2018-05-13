@@ -10,20 +10,22 @@ Gene::Gene()
 {
 	gene = NULL;
 	tail = NULL;
-	allocSize = 0;
+	alloc_size = 0;
+	gene_size = 0;
 }
 
-Gene::Gene(uint64_t _l)
+Gene::Gene(uint64_t len)
 {
-	allocSize = _l;
-	gene = new char[_l];
+	alloc_size = len;
+	gene = new char[len];
 	tail = cur = gene;
-	cout << "Created gene of length: " << allocSize << endl;
+	gene_size = 0;
+	cout << "GENE: created gene of length " << alloc_size << endl;
 }
 
 Gene::~Gene()
 {
-	delete gene;	
+	delete gene;
 }
 
 char *Gene::getHeader()
@@ -33,15 +35,21 @@ char *Gene::getHeader()
 
 uint64_t Gene::getAllocSize()
 {
-	return allocSize;
+	return alloc_size;
+}
+
+uint64_t Gene::getGeneSize()
+{
+	return gene_size;
 }
 
 void Gene::insert(char _v)
 {
-	if ((tail - gene) < allocSize)
+	if ((tail - gene) < alloc_size)
 	{
 		*tail = _v;
 		tail++;
+		gene_size++;
 #ifdef D_P_GENE_DEBUG
 		cout << "GENE: insert [" << _v << "]" << endl;
 #endif

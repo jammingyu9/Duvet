@@ -13,13 +13,15 @@
 class Cell
 {
 private:
-	uint64_t id;
+	/* follows biological model */
 	Gene *gene;
 public:
 	Cell();
-	Cell(uint64_t, uint64_t);
+	Cell(uint64_t);
 
-	void insertGeneInfo(char *);
+	void allocGene(uint64_t);
+	void generateRandomGene();
+	void insertGeneInfo(const char *);
 };
 
 #endif
